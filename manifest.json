@@ -1,0 +1,11 @@
+{
+	"manifest_version": 2,
+	"name": "Voice-Enabled Weather Extension",
+	"version": "0.1",
+	"permissions":["https://*/","contentSettings","geolocation"],
+	"content_security_policy": "script-src 'self' https://geoip.nekudo.com/*; object-src 'self'",
+	"browser_action":{
+		"default_popup":"weather/index.html",
+		"default_title":"Just trying to pop out"
+	}
+}
