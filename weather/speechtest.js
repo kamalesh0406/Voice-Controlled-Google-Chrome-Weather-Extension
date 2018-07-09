@@ -24,14 +24,7 @@ geolocator.config({
         key: "AIzaSyB75KOXOcgjftFtFcc5OiuXXVpa1QzGSCc"
     }
 });
-
-
-recognition.onresult = function(event){
-	var statement = event.results[0][0].transcript
-
-	if (statement=='What is the weather for today')
-	{
-		var options = {
+var options = {
 	    enableHighAccuracy: true,
 	    fallbackToIP: true, // fallback to IP if Geolocation fails or rejected
 	    addressLookup: true
@@ -39,16 +32,17 @@ recognition.onresult = function(event){
 		geolocator.locate(options, function (err, location) {
 			if (err) return console.log(err);
 		    console.log(location);
-		});
+});
+
+recognition.onresult = function(event){
+	var statement = event.results[0][0].transcript
+
+	if (statement=='what is the weather for today')
+	{
+		
 	}
 
-	function successCallback(position){
-		console.log(position);
-	}
-	function errorCallback(error){
-		console.log(error)
-	}
-		console.log(statement)
+	console.log(statement)
 }
 recognition.onnomatch = function(event){
 	console.log("There is no sentence");
