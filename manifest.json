@@ -2,10 +2,12 @@
 	"manifest_version": 2,
 	"name": "Voice-Enabled Weather Extension",
 	"version": "0.1",
-	"permissions":["https://*/","contentSettings","geolocation"],
-	"content_security_policy": "script-src 'self' https://geoip.nekudo.com/*; object-src 'self'",
+	"permissions":["https://*/","contentSettings","geolocation","https://www.geoip.nekudo.com/*"],
+	"content_security_policy": "script-src 'self'  https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css http://127.0.0.1:5000 https://cdnjs.cloudflare.com/ajax/libs/geolocator/2.1.3/geolocator.min.js https://code.jquery.com/jquery-3.3.1.min.js https://jsonip.com/?callback=? https://api.ipstack.com/*; object-src 'self'",
 	"browser_action":{
-		"default_popup":"weather/index.html",
-		"default_title":"Just trying to pop out"
+		"default_popup":"weather/homepage.html",
+		"default_title":"Just trying to pop out",
+		"default_icon":"icon-weather-sunrainheavy-512.png"
 	}
 }
+
