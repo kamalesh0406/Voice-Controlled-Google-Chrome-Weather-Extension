@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 from flask_cors import CORS
 
-db = MySQLdb.connect("localhost","root","rati04kamal","WEATHER")
+db = MySQLdb.connect("localhost","root","password","WEATHER")
 
 curs = db.cursor()
 
